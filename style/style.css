@@ -1,0 +1,74 @@
+body{
+    background: black;
+}
+canvas{
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%);
+    border: 2px solid red;
+}
+
+h3{
+    color : white;
+}
+
+
+button{
+    background: none;
+    outline: none;
+    border: 2px solid white;
+    color: white;
+    height: 40px;
+    width: 120px;
+    border-radius: 15px;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    font-size: 18px;
+}
+
+button::before{
+    content: "";
+    position: absolute;
+    height: 150px;
+    width: 200px;
+    rotate: 45deg;
+    top: 100%;
+    left: -120%;
+    background: white;
+    z-index: -1;
+}
+
+button:hover{
+    color: black;
+}
+
+button:hover::before{
+    animation: anime 1s forwards;
+}
+
+@keyframes anime {
+    0%{
+        left: -120%;
+        top: 100%;
+    }
+    25%{
+        left: -10%;
+        top: -260%;
+    }75%{
+        left: -40%;
+        top: -40%;
+    }100%{
+        left: -10%;
+        top: -40%;
+    }
+}
+
+h3{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
